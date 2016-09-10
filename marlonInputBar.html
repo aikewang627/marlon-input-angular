@@ -1,0 +1,38 @@
+﻿<div>
+	<!--
+        作者：aikewang627@163.com
+        时间：2016-09-03
+        描述： 使用示例	<marlon-input-num-demo name="name" options="inputNumOptions" ng-model="marlonNum" on-after-selected="funcNumSelected($item)"></marlon-input-num-demo>
+
+        注： 此文件是开发时使用的，发布时转变成字符串变量，存放在js文件中。
+   -->
+	<div>
+		<div ng-if="false">
+			<span ng-bind="itemTypeStr"></span>
+		</div>
+		<div ng-if="false">
+			<span ng-repeat="item in itemListSelectedText" class="btn btn-default btn-xs">
+				<span ng-bind="item"></span><i class="fa fa-close"></i>
+			</span>
+		</div>
+		<div style="position:relative; ">
+			<div style="cursor: pointer; line-height:200%">
+				<span ng-show="HasParent" class="btn btn-info btn-xs">
+					<span  ng-click="funcGoUpperLevel()"  ><i class="fa fa-chevron-left"></i>返回</span>
+				</span>
+
+                <span ng-repeat="item in itemListShow.items" ng-show="$index<=ShowLength-1">
+                    <span ng-bind="item.text" ng-click="funcClickItem(itemListShow,item)"
+                           ng-class="{'btn btn-default btn-xs':true,'btn btn-info btn-xs':item.$HasSubSelected,'btn btn-success btn-xs':item.$IsSelected,}"></span>
+                </span>
+
+				<span ng-show="HasMore"  class="btn btn-info btn-xs pull-right" >
+					<span ng-show="!IsExpend"ng-click="funcSetIsExpend()">更多<i class="fa fa-chevron-circle-down"></i></span>
+				    <span ng-show="IsExpend"   ng-click="funcResetIsExpend()">收起<i class="fa fa-chevron-circle-up"></i></span>
+				</span>
+
+			</div>
+
+		</div>
+	</div>
+</div>

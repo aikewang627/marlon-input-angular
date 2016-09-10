@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Marlon Angular 指令</title>
+		<link href="lib/bootstrap.min.css" rel="stylesheet">
+		<link href="lib/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+		<script src="lib/angular.min.js"></script>
+		<script src="marlonInputData.js"></script>
+		<script src="marlonInput.js"></script>
+	</head>
+
+	<body ng-app="appMain">
+		<div ng-controller="ctrlMain">
+
+			<div class="container">
+				<form class="form-horizontal- " role="form" name="myForm" novalidate="novalidate">
+					<div class="row">
+						<!---------- 职位3级3个---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">职位3级3个：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro1" ng-model="modelPosition.OrgPro1" placeholder="" class="form-control" is-tab1="false" is-tab2="false" is-full-item-="true" item-input-custom="true" item-max="3" item-type="position" item-type-str="职位选择1" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 职位2级3个---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">职位2级3个：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro11" ng-model="modelPosition.OrgPro11" placeholder="" class="form-control" is-tab1="false" is-tab2="true" is-full-item="true" item-input-custom="true" item-max="3" item-type="position" item-type-str="职位选择11" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 职位1级3个---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">职位1级3个：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro111" ng-model="modelPosition.OrgPro111" placeholder="" class="form-control" is-tab1="true" is-tab2="true" is-full-item-="true" item-input-custom="true" item-max="3" item-type="position" item-type-str="职位选择111" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 地区3级5个---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">地区3级5个：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro2" ng-model="modelPosition.OrgPro2" placeholder="" class="form-control" is-tab1="false" is-tab2="false" is-full-item="true" item-input-custom="false" item-max="5" item-type="location" item-type-str="地区选择2" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 地区2级5个---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">地区2级5个：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro22" ng-model="modelPosition.OrgPro22" placeholder="" class="form-control" is-tab1="false" is-tab2="true" is-full-item="true" item-input-custom="false" item-max="5" item-type="location" item-type-str="地区选择22" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 地区1级5个---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">地区1级5个：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro222" ng-model="modelPosition.OrgPro222" placeholder="" class="form-control" is-tab1="true" is-tab2="true" is-full-item="true" item-input-custom="false" item-max="5" item-type="location" item-type-str="地区选择222" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 行业3级1个自定义末级项---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">行业3级1个自定义末级项：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro3" ng-model="modelPosition.OrgPro3" placeholder="" class="form-control" is-tab1="false" is-tab2="false" is-full-item="true" item-input-custom="true" item-max="1" item-type="industry" item-type-str="行业选择3" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 行业2级1个自定义末级项---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">行业2级1个自定义末级项：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro33" ng-model="modelPosition.OrgPro33" placeholder="" class="form-control" is-tab1="false" is-tab2="true" is-full-item="true" item-input-custom="true" item-max="1" item-type="industry" item-type-str="行业选择33" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 行业1级1个自定义末级项---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">行业1级1个自定义末级项：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro333" ng-model="modelPosition.OrgPro333" placeholder="" class="form-control" is-tab1="true" is-tab2="true" is-full-item="true" item-input-custom="true" item-max="1" item-type="industry" item-type-str="行业选择333" item-list-custom="" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!---------- 自定义2级3个自定义末级项---------->
+						<div class="col-sm-12 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">自定义2级3个自定义末级项：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-tab3 name="OrgPro4" ng-model="modelPosition.OrgPro4" placeholder="" class="form-control" is-tab1="false" is-tab2="true" is-full-item="true" item-input-custom="true" item-max="3" item-type="custom" item-type-str="自定义4" item-list-custom="modelPosition.$$itemListCustom" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-tab3>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+
+						<!----------数字 可为负，可有小数点---------->
+						<div class="col-sm-6 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">小数：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-num name="Scale" ng-model="modelPosition.Scale1" placeholder="" class="form-control " is-int="false" is-positive="false" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-num>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!----------数字 只可为正数---------->
+						<div class="col-sm-6 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">正数：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-num name="Scale" ng-model="modelPosition.Scale2" placeholder="" class="form-control " is-int="false" is-positive="true" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-num>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!----------数字 只可为整数---------->
+						<div class="col-sm-6 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">整数：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-num name="Scale" ng-model="modelPosition.Scale3" placeholder="" class="form-control " is-int="true" is-positiv="false" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-num>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+						<!----------数字 只可为正整数---------->
+						<div class="col-sm-6 col-xs-12">
+							<div class="form-group form-group-xs ">
+								<label for="firstname" class="col-sm-3 col-xs-3  control-label ">正整数：</label>
+								<div class="col-sm-6 col-xs-6">
+									<marlon-input-num name="Scale" ng-model="modelPosition.Scale4" placeholder="" class="form-control " is-int="true" is-positive="true" ng-required="true" form-field-check="formFieldCheck" form-field-errormsg="{ }"></marlon-input-num>
+								</div>
+								<div class="col-sm-3 col-xs-3">
+									<span class="ddh-color-red ddh-font-bold">*</span>
+								</div>
+							</div>
+						</div>
+
+						<!---------- Bar---------->
+
+						
+					
+					</div>
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                            <table style="width:100%;">
+                                <tbody>
+                                    <tr class="ddh-bar1">
+                                        <td style="font:bold;width:6em;">工作地点：</td>
+                                        <td style="padding:3px;">
+                                            <marlon-input-bar name="Address" ng-model="filterCondition.Address" placeholder="" class-="form-control"
+                                                              is-full-item="true" item-max="3" item-level="2" part-show-num="12"
+                                                              item-type="location" item-type-str="" item-list-custom-=""></marlon-input-bar>
+                                        </td>
+                                    </tr>
+                                    <tr class="ddh-bar1">
+                                        <td style="font:bold;width:6em;">所在行业：</td>
+                                        <td style="padding:3px;">
+                                            <marlon-input-bar name="OrgPro" ng-model="filterCondition.OrgPro" placeholder="" class-="form-control"
+                                                              is-full-item="true" item-max="3" item-level="2" part-show-num="9"
+                                                              item-type="industry" item-type-str="" item-list-custom-=""></marlon-input-bar>
+                                        </td>
+                                    </tr>
+                                    <tr class="ddh-bar1">
+                                        <td style="font:bold;width:6em;">职位：</td>
+                                        <td style="padding:3px;">
+                                            <marlon-input-bar name="Position" ng-model="filterCondition.Position" placeholder="" class-="form-control"
+                                                              is-full-item="true" item-max="3" item-level="2" part-show-num="10"
+                                                              item-type="position" item-type-str="" item-list-custom-=""></marlon-input-bar>
+                                        </td>
+                                    </tr>
+                                    <tr class="ddh-bar1">
+                                        <td style="font:bold;width:6em;">年薪范围：</td>
+                                        <td style="padding:3px;">
+                                            <marlon-input-bar name="SalaryRange" ng-model="filterCondition.SalaryRange" placeholder="" class-="form-control"
+                                                              is-full-item="true" item-max="1" item-level="1" part-show-num-="8"
+                                                              item-type="custom" item-type-str="" item-list-custom="filterItemList.SalaryRange"></marlon-input-bar>
+                                        </td>
+                                    </tr>
+                                    <tr class="ddh-bar1">
+                                        <td style="font:bold;width:6em;">发展阶段：</td>
+                                        <td style="padding:3px;">
+                                            <marlon-input-bar name="OrgLevel" ng-model="filterCondition.OrgLevel" placeholder="" class-="form-control"
+                                                              is-full-item="true" item-max="1" item-level="1" part-show-num-="8"
+                                                              item-type="custom" item-type-str="" item-list-custom="filterItemList.OrgLevel"></marlon-input-bar>
+                                        </td>
+                                    </tr>
+                                    <tr class="ddh-bar1">
+                                        <td style="font:bold;width:6em;">公司规模：</td>
+                                        <td style="padding:3px;">
+                                            <marlon-input-bar name="Scale" ng-model="filterCondition.Scale" placeholder="" class-="form-control"
+                                                              is-full-item="true" item-max="1" item-level="1" part-show-num-="8"
+                                                              item-type="custom" item-type-str="" item-list-custom="filterItemList.Scale"></marlon-input-bar>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+					<div class="row">
+						<div class="col-sm-11 col-xs-12">
+							<div class="form-group form-group-xs  text-center ">
+								<button class="btn btn-success btn-xs " ng-click="funcSave(myForm)">&ensp;&ensp;&ensp;&ensp;保存&ensp;&ensp;&ensp;&ensp;</button>
+							</div>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+		<script>
+			//===================== 定义APP，引入模块 =====================//
+			var app = angular.module('appMain', ['marlon.input.angular', ]);
+			//===================== 表单验证(可不要)=====================//
+			//表单验证时，转化错误提示文本
+			app.filter('formErrorMsgFilter', function() {
+				var messages = {
+					number: ' 此项为数字; ',
+					url: ' 网址不合法; ',
+					email: ' 邮箱地址不合法; ',
+					required: ' 此项为必填项; ',
+				};
+				return function(name, customMessages) {
+					var Messages = angular.extend({}, messages, customMessages); //添加传入的 错误提示信息 集合
+					return Messages[name] || name
+				}
+			});
+			//自定义附加提示文本,此指令依赖formErrorMsgFilter
+			app.directive('formFieldErrormsg', function formFieldErrormsg($compile) {
+				return {
+					restrict: 'A',
+					require: 'ngModel',
+					link: function(scope, element, attrs, ngModel) {
+						var subScope = scope.$new(true);
+						subScope.hasError = function() {
+							var checkSign = scope.$eval(attrs.formFieldCheck);
+							return ngModel.$invalid && (ngModel.$dirty || checkSign);
+						};
+						subScope.errors = function() {
+							return ngModel.$error;
+						};
+						subScope.customMessages = scope.$eval(attrs.formFieldErrormsg); //获取属性上的 错误提示信息 集合
+						var hint = $compile('<span class="ddh-color-red ddh-font-content-11" ng-if=hasError()><span ng-repeat="(name,wrong) in errors()" ng-if="wrong">{{ name| formErrorMsgFilter:customMessages}}</span></span>')(subScope);
+						element.after(hint);
+					},
+				};
+			});
+			//自定义验证规则，要求输入相同
+			app.directive('formFieldSameto', function formFieldSameto() {
+				return {
+					restrict: 'A',
+					require: 'ngModel',
+					link: function(scope, element, attrs, ngModel) {
+						var isSame = function(value) {
+								return value === scope.$eval(attrs.formFieldSameto);
+							}
+							//添加验证规则：$parsers是一个函数数组，ngModel中的值会作为参数传入，依次执行函数
+						ngModel.$parsers.push(function(value) {
+							ngModel.$setValidity('sameto', isSame(value));
+							return isSame(value) ? value : undefined; //return的值，将作为下一个函数参数
+						});
+						//监视参照值：自动更新验证结果
+						scope.$watch(function() {
+							return scope.$eval(attrs.formFieldSameto);
+						}, function() {
+							return ngModel.$setValidity('sameto', isSame(ngModel.$modelValue));
+						});
+					},
+				};
+			});
+			//===================== 控制器 =====================//
+			app.controller('ctrlMain', function($scope) {
+
+				$scope.modelPosition = {
+					$$itemListCustom: [{
+							text: "食物",
+							value: 000,
+							items: [{
+								text: "水果",
+								value: 00,
+								items: [{
+									text: "桔子",
+									value: 0,
+								}, {
+									text: "苹果",
+									value: 0,
+								}, ],
+							}, {
+								text: "肉类",
+								value: 00,
+								items: [{
+									text: "鱼",
+									value: 0,
+								}, {
+									text: "鸡",
+									value: 0,
+								}, ],
+							}, ]
+						}, {
+							text: "生活用品",
+							value: 000,
+							items: [{
+								text: "洗漱",
+								value: 00,
+								items: [{
+									text: "杯子",
+									value: 0,
+								}, {
+									text: "牙刷",
+									value: 0,
+								}, ],
+							}, {
+								text: "电器",
+								value: 00,
+								items: [{
+									text: "空调",
+									value: 0,
+								}, {
+									text: "洗衣机",
+									value: 0,
+								}, ],
+							}, ]
+						}, {
+							text: "办公用品",
+							value: 000,
+							items: [{
+								text: "通用",
+								value: 00,
+								items: [{
+									text: "电脑",
+									value: 0,
+								}, {
+									text: "笔",
+									value: 0,
+								}, ],
+							}, {
+								text: "专用",
+								value: 00,
+								items: [{
+									text: "测试仪",
+									value: 0,
+								}, {
+									text: "装订机",
+									value: 0,
+								}, ],
+							}, ]
+						},
+
+					],
+				};
+
+
+
+				$scope.funcSave = function(myForm) {
+					console.log(myForm);
+					console.log($scope.modelPostion)
+				};
+				
+				$scope.$watch("modelPosition.OrgPro5",function(v1,v2){
+					
+					console.log(v1);
+				});
+				$scope.$watch("modelPosition.OrgPro55",function(v1,v2){
+					
+					console.log(v1);
+				});
+
+
+			    //=========================================//
+
+			    //过滤栏，设置
+				$scope.filterItemList = {
+				    SalaryRange: [
+                        { text: "0-7万", value: "0-7" },
+                        { text: "7-12万", value: "7-12" },
+                        { text: "12-15万", value: "12-15" },
+                        { text: "15-20万", value: "15-20" },
+                        { text: "20-30万", value: "20-30" },
+                        { text: "30-50万", value: "30-50" },
+                        { text: "50-100万", value: "50-100" },
+                        { text: "100万以上", value: "100-" }, ],
+				    OrgLevel: [
+                        { text: "种子期", value: "种子期" },
+                        { text: "创业期", value: "创业期" },
+                        { text: "成长期", value: "成长期" },
+                        { text: "成熟期", value: "成熟期" }, ],
+				    Scale: [
+                        { text: "1-49人", value: "1" },
+                        { text: "50-99人", value: "2" },
+                        { text: "100-499人", value: "3" },
+                        { text: "500-999人", value: "4" },
+                        { text: "1000-2000人", value: "5" },
+                        { text: "2000-5000人", value: "6" },
+                        { text: "5000-10000人", value: "7" },
+                        { text: "10000人以上", value: "8" }, ]
+				}
+			    //条件栏，选择后的结果
+				$scope.filterCondition = {};
+			    //监控变量
+				$scope.$watchCollection("filterCondition", function (newValue, oldValue, scope) {
+				    console.log(newValue);
+				    $scope.funGetListByCondition();
+				});
+
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,81 @@
+<div style="position: relative;">
+    <!--
+        作者：aikewang627@163.com
+        时间：2016-09-03
+        描述： 使用示例	<marlon-input-num-demo name="name" options="inputNumOptions" ng-model="marlonNum" on-after-selected="funcNumSelected($item)"></marlon-input-num-demo>
+        
+        注： 此文件是开发时使用的，发布时转变成字符串变量，存放在js文件中。
+    -->
+    <!--   普通Input控件，用于显示值，点击时显示编辑框     -->
+    <input type="text" placeholder="{{placeholder}}" ng-click="funcInputClick()" style="width:inherit;border:none;" ng-model="ngModel" /><br />
+    <!--    编辑框    -->
+    <div ng-if="isShow" class=" "  style="position:absolute;z-index:10;left:1px;top:22px;width:200px;border:2px solid #808080; border-radius:5px; background-color: #ffffff;">
+            <div class=" text-center" style="margin-top: 0px; margin-bottom: 0px; margin:3px;">
+                <div class="row" style="margin-top:3px;margin-bottom:3px;">
+
+                    <div class="col-xs-8  col ">
+                        <button ng-bind="inputNum" class="btn btn-sm btn-block  button-block" style="text-align: right; font:bolder;"></button>
+                    </div>
+                    <div class="col-xs-4   ">
+                        <button ng-click="funcBackspace()" class="btn btn-sm  btn-warning btn-block ">C</button>
+                    </div>
+
+                </div>
+                <div class="row" style="margin-top:3px;margin-bottom:3px;">
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClickItem('0')" class="btn btn-sm btn-block ">0</button>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClickItem('.')" ng-disabled="isInt=='true'" class="btn btn-sm btn-block ">.</button>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcInvert()" ng-disabled="isPositive=='true'" class="btn btn-sm btn-block ">-</button>
+                    </div>
+                </div>
+                <div class="row " style="margin-top:3px;margin-bottom:3px;">
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClickItem('1')" class="btn btn-sm btn-block ">1</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button ng-click="funcClickItem('2')" class="btn btn-sm btn-block ">2</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button ng-click="funcClickItem('3')" class="btn btn-sm btn-block ">3</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3px;margin-bottom:3px;">
+                    <div class="col-xs-4">
+                        <button ng-click="funcClickItem('4')" class="btn btn-sm btn-block ">4</button>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClickItem('5')" class="btn btn-sm btn-block ">5</button>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClickItem('6')" class="btn btn-sm btn-block ">6</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3px;margin-bottom:3px;">
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClickItem('7')" class="btn btn-sm btn-block ">7</button>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClickItem('8')" class="btn btn-sm btn-block ">8</button>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClickItem('9')" class="btn btn-sm btn-block ">9</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3px;margin-bottom:3px;">
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcClear()" class="btn btn-sm btn-warning btn-block  ">清零</button>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcCancel()" class="btn btn-sm btn-default btn-block  ">取消</button>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <button ng-click="funcOk()" class="btn btn-sm btn-success btn-block ">确认</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>

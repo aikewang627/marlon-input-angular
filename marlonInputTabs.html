@@ -1,0 +1,69 @@
+﻿<div>
+    <!--
+        作者：aikewang627@163.com
+        时间：2016-09-03
+        描述： 使用示例	<marlon-input-num-demo name="name" options="inputNumOptions" ng-model="marlonNum" on-after-selected="funcNumSelected($item)"></marlon-input-num-demo>
+
+        注： 此文件是开发时使用的，发布时转变成字符串变量，存放在js文件中。
+    -->
+    <!--   普通Input控件，用于显示值，点击时显示编辑框     -->
+    <input type="text" placeholder=" {{placeholder}} " ng-click="funcInputClick() " style="width:100%;border:none;" ng-model="ngModel " /><br />
+    <!--    编辑框    -->
+    <div ng-show="isShow " class="modal " style=" top:10px; height: 800px;display:block;">
+        <div class=" modal-dialog ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <h4 class="modal-title "><span ng-bind="itemTypeStr"></span></h4>
+                </div>
+                <div class="modal-body ">
+                    <!--   选中的值，单击删除     -->
+                    <div class="">
+                        <div class="">
+                            <span ng-repeat="item in selectedItemList ">
+                                <span ng-click="funcUnselectItem(item) " class="btn btn-sm btn-outline-success button button-small button-calm" style="margin: 3px;">
+                                    <span ng-bind="item "></span>&ensp;<i class="fa fa-remove icon ion-close"></i>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <!--   候选的值，选项卡    -->
+                    <div class="" style="margin-top: 5px;">
+                        <div class="nav nav-tabs button-bar">
+                            <span class="btn btn-info btn-sm button button button-royal" ng-click="funcClickTab1()">全部 </span>
+                            <span class="btn btn-info  btn-sm button button button-positive" ng-click="funcClickTab2()" ng-show="curItemPage1.text " ng-bind="curItemPage1.text "></span>
+                            <span class="btn btn-info  btn-sm button button button-calm" ng-click="funcClickTab3()" ng-show="curItemPage2.text " ng-bind="curItemPage2.text "> </span>
+                            <span style="font-size: small; color :#ff0000;">（最多选择<span ng-bind="itemMax"></span>个）</span>
+                        </div>
+                    </div>
+                    <!--   候选的值，单击添加     -->
+                    <div class="tab-content ">
+                        <div class="tab-pane fade in active" style="min-height: 180px; ">
+                            <span ng-hide="curItemPage1 " ng-repeat="item in itemList ">
+                                <span class="btn   btn-sm button button-small button-royal" style="margin: 3px;" ng-click="funcClickItem1(item) ">
+                                    <span ng-bind="item.text "></span>&ensp;<i class="icon ion-chevron-right"></i>
+                                </span>
+                            </span>
+                            <span ng-hide="curItemPage2 " ng-repeat="item in curItemPage1.items ">
+                                <span class="btn   btn-sm button button-small button-positive" style="margin: 3px;" ng-click="funcClickItem2(item) ">
+                                    <span ng-bind="item.text "></span>&ensp;<i class="icon ion-chevron-right"></i>
+                                </span>
+                            </span>
+                            <span ng-repeat="item in curItemPage2.items ">
+                                <span class="btn   btn-sm button button-small button-calm" style="margin: 3px;" ng-show="funcShowItem3(item)" ng-click="funcClickItem3(item) ">
+                                    <span ng-bind="item.text "></span>&ensp;<i class="icon ion-plus"></i>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <!--   自定义值，输入完成后，按逗号添加     -->
+                    <input ng-show="funcShowCustomInput() " class="form-control" type="text" placeholder="自定义值，按逗号添加 " ng-model="customItem" ng-keyup="funcCustomKeyup($event) " />
+                </div>
+                <!--   关闭窗体     -->
+                <div class="modal-footer ">
+                    <button class="btn btn-sm btn-default button button-small button-stable" ng-click="funcCancel() ">&ensp;&ensp;取消&ensp;&ensp;</button>
+                    <button class="btn btn-sm btn-success button button-small button-energized" ng-click="funcOk() ">&ensp;&ensp;确定&ensp;&ensp;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
