@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Marlon Angular 指令</title>
-		<link href="lib/bootstrap.min.css" rel="stylesheet">
+		<link href="lib/bootstrap.css" rel="stylesheet">
 		<link href="lib/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
 		<script src="lib/angular.min.js"></script>
 		<script src="marlonInputData.js"></script>
@@ -453,7 +453,6 @@
 			    //监控变量
 				$scope.$watchCollection("filterCondition", function (newValue, oldValue, scope) {
 				    console.log(newValue);
-				    $scope.funGetListByCondition();
 				});
 
 			});
