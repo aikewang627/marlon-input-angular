@@ -430,7 +430,7 @@ angular.module('marlon.input.angular', ['marlon.input.data'])
 				$scope.isTab2 = $scope.isTab2 ? true : false; //是否采用2个选项卡
 				$scope.isFullItem = $scope.isFullItem ? true : false; //是否保存全路径
 				$scope.itemInputCustom = $scope.itemInputCustom ? true : false; //
-				$scope.itemListCustom = $scope.itemListCustom ? $scope.itemListCustom : [];
+				//$scope.itemListCustom = $scope.itemListCustom ? $scope.itemListCustom : [];
 
 				if($scope.itemType == "custom") {
 					$scope.itemList = $scope.itemListCustom;
@@ -662,7 +662,7 @@ angular.module('marlon.input.angular', ['marlon.input.data'])
 				$scope.isTab1 = $scope.isTab1 ? true : false; //是否采用2个选项卡
 				$scope.isTab2 = $scope.isTab2 ? true : false; //是否采用2个选项卡
 				$scope.itemInputCustom = $scope.itemInputCustom ? true : false; //
-				$scope.itemListCustom = $scope.itemListCustom ? $scope.itemListCustom : [];
+				//$scope.itemListCustom = $scope.itemListCustom ? $scope.itemListCustom : [];
 				$scope.itemListIndustry = marlonInputTab3ItemList.industry;
 				$scope.itemListPosition = marlonInputTab3ItemList.position;
 				$scope.itemListLocation = marlonInputTab3ItemList.location;
@@ -898,7 +898,7 @@ angular.module('marlon.input.angular', ['marlon.input.data'])
 				$scope.itemType = $scope.itemType ? $scope.itemType : ""; //
 				$scope.itemTypeStr = "";
 				$scope.isFullItem = $scope.isFullItem ? true : false; //是否保存全路径
-				$scope.itemListCustom = $scope.itemListCustom ? $scope.itemListCustom : [];
+				//$scope.itemListCustom = $scope.itemListCustom ? $scope.itemListCustom : [];
 
 				//
 				if($scope.itemType == "custom") {
